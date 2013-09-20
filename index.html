@@ -4,6 +4,10 @@ title: Welcome
 ---
 <p>This site is built on Github pages using Jekyll!</p>
 
+<ul>
 {% for post in site.posts limit: 5 %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li>
+        <a href="{{ post.url }}">{{ post.title }}</a> {{ post.date | date_to_long_string }}
+    </li>
 {% endfor %}
+</ul>
